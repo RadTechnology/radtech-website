@@ -41,7 +41,7 @@
 
 <body>
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="#" onclick="$('#navbarNav').removeClass('show')">
     <span class="brand-title">Rad Technology</span>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -49,7 +49,7 @@
     <span class="navbar-toggler-icon" onclick="$('#navbarNav').toggleClass('show')"></span> <!-- これだけの為にbootstrap.js入れるの躊躇した結果(雑) -->
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ml-auto" onclick="$('#navbarNav').removeClass('show')">
       <li class="nav-item">
         <a class="nav-link" href="#products">PRODUCTS</a>
       </li>
@@ -78,26 +78,20 @@
 </header>
 <main>
   <div class="container contents center" id="products">
+    <h1 class="center">Products</h1>
     <div class="row justify-content-md-center">
-      <div class="col-md-2 smp-center">
-        <h1>Products</h1>
+      <div class="col-md-4">
+        <a href="https://thinkers.radtech.work/" target="_blank">
+          <img src="img/free-thinkers.png" class="rounded product-icon"/>
+          <h4>Free Thinkers</h4>
+          悩み事、考え事を解決するためのリアルタイムチャットサービス
+        </a>
       </div>
-      <div class="col-md-10">
-        <div class="row justify-content-md-center">
-          <div class="col-md-4">
-            <a href="https://thinkers.radtech.work/" target="_blank">
-              <img src="img/free-thinkers.png" class="rounded-circle product-icon"/>
-              <h4>Free Thinkers</h4>
-              悩み事、考え事を解決するためのリアルタイムチャットサービス
-            </a>
-          </div>
-          <div class="col-md-4">
-            <img src="https://github.com/RadTechnology.png" class="rounded-circle product-icon"/>
-            <h4>Creating.Social</h4>
-            <i>クリエイターのための情報共有サイト</i><br>
-            製作中！
-          </div>
-        </div>
+      <div class="col-md-4">
+        <img src="https://github.com/RadTechnology.png" class="rounded product-icon"/>
+        <h4>Creating.Social</h4>
+        <i>クリエイターのための情報共有サイト</i><br>
+        製作中！
       </div>
     </div>
   </div>
@@ -172,7 +166,7 @@
 
   function watchNav() {
     var ScrollPos = $(window).scrollTop(), TargetPos = $(content).offset().top;
-    if (ScrollPos > TargetPos) {
+    if (ScrollPos > (TargetPos - 50)) {
       $(navbar).addClass("navbar-fix");
     } else {
       $(navbar).removeClass("navbar-fix");
