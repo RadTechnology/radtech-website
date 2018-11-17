@@ -15,18 +15,18 @@ html, body {
   text-align: center;
 }
 
-.navbar {
+nav.navbar {
   background-color: transparent !important;
   transition: all 300ms 0s ease;
   padding: 1.2rem 1.5rem;
 }
 
-.navbar a:link, .navbar a:hover, .nav-link {
+nav.navbar a:link, nav.navbar a:hover, nav.nav-link {
   color: #f3f3f3 !important;
   transition: all 300ms 0s ease;
 }
 
-.navbar-fix {
+nav.navbar-fix {
   background-color: rgba(0, 0, 0, .7) !important;
   padding: .5rem 1.5rem;
 }
@@ -114,7 +114,7 @@ main {
 }
 
 @media screen and (max-width: 800px) { /* smp */
-  .navbar {
+  nav .navbar {
     background-color: rgba(0, 0, 0, .7) !important;
     padding: .2rem 1.5rem;
   }
