@@ -114,7 +114,7 @@ main {
 }
 
 @media screen and (max-width: 800px) { /* smp */
-  nav .navbar {
+  nav.navbar {
     background-color: rgba(0, 0, 0, .7) !important;
     padding: .2rem 1.5rem;
   }
